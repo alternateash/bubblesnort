@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Sorting Algorithms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Animated Sorting Algorithms (C Implementations)</h1>
+
+    <div class="controls">
+        <label for="input-string">Input String:</label>
+        <input type="text" id="input-string" value="EXAMPLE" size="10">
+
+        <label for="algorithm-select">Algorithm:</label>
+        <select id="algorithm-select">
+            <option value="seq_sort">Sequence Sort</option>
+            <option value="bubble_sort">Bubble Snort</option>
+        </select>
+
+        <label for="speed-slider">Speed:</label>
+        <input type="range" id="speed-slider" min="50" max="1500" value="500" step="50"> Fast <-> Slow
+
+        <button id="reset-button">Load String / Reset</button>
+        <button id="start-button" disabled>Start Sorting</button>
+        <p id="warning" class="warning"></p>
+    </div>
+
+    <div class="main-container">
+
+        <div class="visualization-area">
+            <h2>Visualization:</h2>
+            <div id="status" class="status">Enter string, select algorithm, and press Load/Reset.</div>
+
+            <div id="comparison-info" class="comparison-info"></div>
+            <svg id="svg-visualization" width="600" height="150"></svg>
+            <div id="current-visual-state" class="current-perm"></div> <!-- Can show current array state as text too -->
+            <div class="output-panel">
+                 <h3>Sorting Steps Log:</h3>
+                 <pre id="output-log"></pre>
+            </div>
+        </div>
+
+        <div class="code-panel">
+            <h2>Code: (Selected Algorithm - C)</h2>
+            <pre><code id="code-display"></code></pre>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
